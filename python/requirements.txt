@@ -1,0 +1,4 @@
+colorama==0.4.3
+influxdb_client==1.36.1
+pymavlink==2.4.29
+pyserial==3.5

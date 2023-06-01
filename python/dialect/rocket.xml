@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<mavlink>
+
+    <include>common.xml</include>
+    <!-- <version>9</version> -->
+    <dialect>3</dialect>
+
+    <enums>
+        <!-- Enums are defined here (optional) -->
+    </enums>
+
+    <messages>
+        <message id="60" name="SIMBA_ACTUATOR_STATUS">
+            <description>Status update from actuator.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="uint8_t" name="values">Actuators' values - each bit represents one actuator</field>
+            <field type="uint8_t" name="errors">Actuators' errors - each bit represents one actuator</field>
+        </message>
+        <message id="68" name="SIMBA_TEMPERATURE_STATUS">
+            <description>Readings from tank temperature sensors.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="float" name="t_1">Temperature from tank</field>
+            <field type="float" name="t_2">Temperature from tank</field>
+            <field type="float" name="t_3">Temperature from tank</field>
+            <field type="float" name="t_4">Temperature from tank</field>
+            <field type="uint8_t" name="sensors_error">Four sensors health</field>
+        </message>
+        <message id="71" name="SIMBA_PRESSURE_STATUS">
+            <description>Readings from pressure sensor.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="double" name="value">Reading value</field>
+            <field type="uint8_t" name="error">Sensor's health</field>
+        </message>
+        <message id="72" name="SIMBA_DIFFERENTIAL_PRESSURE_STATUS">
+            <description>Readings from differential pressure sensor.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="double" name="value">Reading value</field>
+            <field type="uint8_t" name="error">Sensor's health</field>
+        </message>
+        <message id="78" name="SIMBA_WEIGHT_STATUS">
+            <description>Readings from tank temperature sensors.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="float" name="weight">Reading value</field>
+            <field type="float" name="force">Reading value</field>
+            <field type="uint8_t" name="error">Sensor's health</field>
+        </message>
+        <message id="79" name="SIMBA_HEARTBEATS">
+            <description>Heartbeats from CAN modules.</description>
+            <field type="uint64_t" name="timestamp">Timestamp (time since system boot)</field>
+            <field type="uint8_t" name="nodes_status">Nodes statuses - each bit represents one node</field>
+            <field type="uint8_t" name="nodes_reset">Nodes reset - each bit represents one node</field>
+        </message>
+    </messages>
+
+</mavlink>
