@@ -3,9 +3,9 @@ services:
 
   influxdb:
     image: influxdb:2.6.1
-    container_name: influxdb2
+    container_name: influxdb
     volumes:
-      - myInfluxVolume:/var/lib/influxdb2
+      - myInfluxVolume:/var/lib/influxdb
     ports:
       - 8086:8086
     environment:
