@@ -52,6 +52,12 @@ services:
     volumes:
     - /dev:/dev
 
+  resources:
+    container_name: python-res
+    build: ./resources
+    ports:
+      - 80:80  
+
 networks:
   net:
 
