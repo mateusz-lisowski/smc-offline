@@ -14,6 +14,10 @@ that runs on dockerized environment which consists of:
 - localhost:8086 : **InfluxDB** *(simba, simba123)*
 - localhost:3001 : **Grafana**
 
+## IP adresses
+- Moto G5 S: 192.168.43.153
+- Home router and static ip: 192.168.0.18 
+
 ## Technologies
 
 ### InfluxDB
